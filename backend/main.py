@@ -18,7 +18,7 @@ columns = joblib.load("columns.pkl")
 print("All loaded!")
 
 # Load training data to get median values for missing features
-df_train = pd.read_csv("../notebook/DATA_SET.csv")
+df_train = pd.read_csv("DATA_SET.csv")
 train_medians = df_train.select_dtypes(include=[np.number]).median()
 
 app = FastAPI()
