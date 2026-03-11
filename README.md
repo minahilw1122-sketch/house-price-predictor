@@ -2,7 +2,7 @@
 
 A full-stack machine learning web app that predicts residential property prices using a Ridge Regression model trained on the Ames Housing dataset.
 
-**Live Demo:** [Coming Soon]
+**Live Demo:** [House Price Predictor](https://house-price-predictor-two.vercel.app)
 
 ---
 
