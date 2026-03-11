@@ -55,7 +55,7 @@ export default function PredictForm({ setResult, setLoading }) {
     setLoading(true)
     setResult(null)
     try {
-      const response = await fetch("http://127.0.0.1:8080/predict", {
+      const response = await fetch("https://minahil1122-house-price-predictor.hf.space/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features: formData }),
@@ -74,7 +74,6 @@ export default function PredictForm({ setResult, setLoading }) {
 
   return (
     <div>
-      {/* Step indicators */}
       <div className="flex items-center gap-2 mb-8">
         {steps.map((s, i) => (
           <div key={i} className="flex items-center gap-2">
@@ -97,7 +96,6 @@ export default function PredictForm({ setResult, setLoading }) {
         ))}
       </div>
 
-      {/* Form */}
       <form onSubmit={isLastStep ? handleSubmit : handleNext}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {currentStep.fields.map((field) => (
@@ -120,7 +118,6 @@ export default function PredictForm({ setResult, setLoading }) {
           ))}
         </div>
 
-        {/* Buttons */}
         <div className="flex gap-3 mt-6">
           {step > 0 && (
             <button
